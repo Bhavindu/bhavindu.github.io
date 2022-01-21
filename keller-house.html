@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+	</head>
+	<style>
+		body,
+		html {
+			min-height: 100%;
+		}
+		.bg {
+			background-color: #4e4e50;
+		}
+		* {
+			color: #333333;
+			font-family: "Roboto", sans-serif;
+		}
+		.flex {
+			display: flex;
+		}
+		.flex-col {
+			flex-direction: column;
+		}
+		.flex-row {
+			flex-direction: row;
+		}
+		.justify-center {
+			justify-content: center;
+		}
+		.items-center {
+			align-items: center;
+		}
+		a {
+			text-decoration: none;
+		}
+		.w {
+			width: 100%;
+		}
+		.am {
+			-webkit-transition: background 0.5s linear;
+			-moz-transition: background 0.5s linear;
+			-ms-transition: background 0.5s linear;
+			-o-transition: background 0.5s linear;
+			transition: background 0.5s linear;
+		}
+		.transparent {
+			background-color: transparent;
+		}
+		.filled {
+			background-color: #f7f7f7;
+		}
+		.black {
+			color: #333333;
+		}
+		.white {
+			color: white;
+		}
+		#keller-cover::before {
+			position: fixed;
+		}
+		#keller-blur {
+			/* The image used */
+			background-image: url("./img/keller-blur.jpg");
+			width: 100%;
+			/* Full height */
+			height: 100vh;
+
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#keller-cover {
+			/* The image used */
+			background-image: url("./img/Keller.jpg");
+
+			/* Full height */
+			height: 100vh;
+
+			/* Center and scale the image nicely */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		.downArrow {
+			position: absolute;
+			bottom: 10%;
+			left: 50%;
+		}
+		.subheading {
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+	</style>
+	<body
+		class="bg flex flex-col items-center"
+		style="min-height: 100vh; margin: 0px"
+	>
+		<div
+			id="nav"
+			class="flex w am transparent"
+			style="
+				justify-content: space-between;
+				padding: 15px 0px;
+				align-items: center;
+				position: fixed;
+				top: 0;
+				z-index: 10;
+			"
+		>
+			<div style="padding-left: 40px">
+				<a
+					id="main"
+					href="/"
+					class="am white"
+					style="font-weight: 900; font-size: 26px"
+					>BHAVINDU</a
+				>
+			</div>
+			<div style="padding-right: 40px">
+				<a
+					href="/#about-section"
+					class="am white"
+					id="about"
+					style="
+						font-weight: 500;
+						font-size: 16px;
+						padding-right: 20px;
+						cursor: pointer;
+					"
+					>ABOUT</a
+				>
+				<a
+					href="/#proj-section"
+					class="am white"
+					id="proj"
+					style="font-weight: 500; font-size: 16px; cursor: pointer"
+					>PROJECTS</a
+				>
+			</div>
+		</div>
+		<div id="keller-blur">
+			<div
+				id="keller-cover"
+				class="flex w flex-col justify-center items-center"
+			>
+				<div
+					class="
+						animate__animated animate__fadeIn animate__delay-5s animate__slower
+					"
+					style="
+						font-weight: 900;
+						font-size: 75px;
+						color: white;
+						text-align: center;
+						background-color: #00000070;
+						padding: 10px 25px;
+						border-radius: 20px;
+					"
+				>
+					THE KELLER HOUSE
+				</div>
+				<div class="animate__animated animate__fadeIn animate__delay-5s">
+					<div
+						class="
+							downArrow
+							animate__bounce
+							animate__infinite
+							animate__animated
+							animate__delay-2s
+							animate__slower
+						"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="flex justify-center items-center flex-col w"
+			style="padding: 3% 0; background-color: #1a1a1d"
+		>
+			<div
+				style="
+					max-width: 950px;
+					padding: 0 20px;
+					color: #fafafa;
+					text-align: center;
+					line-height: 20px;
+				"
+			>
+				The Keller House project posed an interesting proposition that tasked me
+				with designing a residential space for a disabled client of my choosing.
+				I sought a client for whom traditional architectural solutions would not
+				be viable as dictated by their disability. Helen Keller proved to be the
+				ideal candidate insofar as her deaf-blindness rendered most traditional
+				architectural solutions useless, subsequently, creating a unique
+				architectural challenge for me to indulge. The greatest challenge in
+				this project became finding justification for any architectural proposal
+				that challenges tradition and conventional practices. To overcome this,
+				I had to understand and ground myself in the theoretical framework of
+				Deconstructionism, employing its reasoning to imbue meaning and to serve
+				as justification for an architectural solution that is an artistic
+				expression that embodies Helen Keller and her story.
+			</div>
+		</div>
+
+		<div>
+			<div
+				class="flex justify-center bg"
+				style="position: sticky; top: 62px; background-color: #f7f7f7"
+			>
+				<div style="max-width: 700px; padding: 10px">
+					<span id="subMenu-1" class="subheading">Client Profile</span>
+					<span
+						style="
+							color: #3333335e;
+							font-size: 18px;
+							font-weight: 700;
+							text-transform: uppercase;
+							padding: 0px 10px;
+						"
+						>+</span
+					>
+					<span id="subMenu-2" class="subheading">Concept</span>
+					<span
+						style="
+							color: #3333335e;
+							font-size: 18px;
+							font-weight: 700;
+							text-transform: uppercase;
+							padding: 0px 10px;
+						"
+						>+</span
+					>
+					<span id="subMenu-3" class="subheading">Structure</span>
+					<span
+						style="
+							color: #3333335e;
+							font-size: 18px;
+							font-weight: 700;
+							text-transform: uppercase;
+							padding: 0px 10px;
+						"
+						>+</span
+					>
+					<span id="subMenu-4" class="subheading">Floor plans</span>
+				</div>
+			</div>
+			<div
+				class="flex justify-center items-center w flex-col"
+				style="flex-wrap: wrap; gap: 20px; padding: 50px 0px"
+			>
+				<div
+					id="img-1"
+					data-imgID="1"
+					class="galleryTrigger"
+					style="width: 75%; cursor: pointer"
+				>
+					<img style="width: 100%" src="./img/4-min.png" alt="" />
+				</div>
+				<div
+					id="img-2"
+					data-imgID="2"
+					class="galleryTrigger"
+					style="width: 75%; cursor: pointer"
+				>
+					<img style="width: 100%" src="./img/5-min.png" alt="" />
+				</div>
+				<div
+					id="img-3"
+					data-imgID="3"
+					class="galleryTrigger"
+					style="width: 75%; cursor: pointer"
+				>
+					<img style="width: 100%" src="./img/6-min.png" alt="" />
+				</div>
+				<div
+					id="img-4"
+					data-imgID="4"
+					class="galleryTrigger"
+					style="width: 75%; cursor: pointer"
+				>
+					<img style="width: 100%" src="./img/7-min.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+			<div class="pswp__bg"></div>
+
+			<!-- Slides wrapper with overflow:hidden. -->
+			<div class="pswp__scroll-wrap">
+				<!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+				<div class="pswp__container">
+					<!-- don't modify these 3 pswp__item elements, data is added later on -->
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+
+				<!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<!--  Controls are self-explanatory. Order can be changed. -->
+
+						<div class="pswp__counter"></div>
+
+						<button
+							class="pswp__button pswp__button--close"
+							title="Close (Esc)"
+						></button>
+
+						<button
+							class="pswp__button pswp__button--share"
+							title="Share"
+						></button>
+
+						<button
+							class="pswp__button pswp__button--fs"
+							title="Toggle fullscreen"
+						></button>
+
+						<button
+							class="pswp__button pswp__button--zoom"
+							title="Zoom in/out"
+						></button>
+
+						<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+						<!-- element will get class pswp__preloader--active when preloader is running -->
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+					>
+						<div class="pswp__share-tooltip"></div>
+					</div>
+
+					<button
+						class="pswp__button pswp__button--arrow--left"
+						title="Previous (arrow left)"
+					></button>
+
+					<button
+						class="pswp__button pswp__button--arrow--right"
+						title="Next (arrow right)"
+					></button>
+
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		const navEl = document.querySelector("#nav");
+		document.addEventListener("scroll", function () {
+			scrollPosition = window.scrollY;
+			console.log(scrollPosition);
+			if (scrollPosition > 100) {
+				navEl.classList.remove("transparent");
+				navEl.classList.add("filled");
+				document.querySelector("#main").classList.remove("white");
+				document.querySelector("#about").classList.remove("white");
+				document.querySelector("#proj").classList.remove("white");
+				document.querySelector("#main").classList.add("black");
+				document.querySelector("#about").classList.add("black");
+				document.querySelector("#proj").classList.add("black");
+			} else {
+				navEl.classList.remove("filled");
+				navEl.classList.add("transparent");
+				document.querySelector("#main").classList.remove("black");
+				document.querySelector("#about").classList.remove("black");
+				document.querySelector("#proj").classList.remove("black");
+				document.querySelector("#main").classList.add("white");
+				document.querySelector("#about").classList.add("white");
+				document.querySelector("#proj").classList.add("white");
+			}
+		});
+
+		var openPhotoSwipe = function (id) {
+			var pswpElement = document.querySelectorAll(".pswp")[0];
+
+			// build items array
+			var items = [
+				{
+					src: "./img/3-min.png",
+					w: 5101,
+					h: 3300,
+				},
+				{
+					src: "./img/4-min.png",
+					w: 5100,
+					h: 3300,
+				},
+				{
+					src: "./img/5-min.png",
+					w: 5101,
+					h: 3300,
+				},
+				{
+					src: "./img/6-min.png",
+					w: 5101,
+					h: 3300,
+				},
+				{
+					src: "./img/7-min.png",
+					w: 5101,
+					h: 3300,
+				},
+			];
+			console.log(id);
+			idx = id;
+			// define options (if needed)
+			var options = {
+				index: parseInt(id),
+			};
+
+			var gallery = new PhotoSwipe(
+				pswpElement,
+				PhotoSwipeUI_Default,
+				items,
+				options
+			);
+			gallery.init();
+		};
+
+		document.querySelectorAll(".galleryTrigger").forEach(function (e) {
+			e.addEventListener("click", function () {
+				openPhotoSwipe(e.dataset.imgid);
+			});
+		});
+
+		for (let i = 1; i < 5; i++) {
+			document
+				.querySelector("#subMenu-" + i)
+				.addEventListener("click", function () {
+					window.scrollTo({
+						top:
+							document.querySelector("#img-" + i).getBoundingClientRect().top +
+							window.pageYOffset +
+							-100,
+						behavior: "smooth",
+					});
+				});
+		}
+	</script>
+</html>

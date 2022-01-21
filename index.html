@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+	</head>
+	<style>
+		.bg {
+			background-color: #4e4e50;
+		}
+		* {
+			color: #333333;
+			font-family: "Roboto", sans-serif;
+		}
+		.flex {
+			display: flex;
+		}
+		.flex-col {
+			flex-direction: column;
+		}
+		.flex-row {
+			flex-direction: row;
+		}
+		.justify-center {
+			justify-content: center;
+		}
+		.items-center {
+			align-items: center;
+		}
+		a {
+			text-decoration: none;
+		}
+		.w {
+			width: 100%;
+		}
+		.am {
+			-webkit-transition: background 0.5s linear;
+			-moz-transition: background 0.5s linear;
+			-ms-transition: background 0.5s linear;
+			-o-transition: background 0.5s linear;
+			transition: background 0.5s linear;
+		}
+		.transparent {
+			background-color: transparent;
+		}
+		.filled {
+			background-color: #f7f7f7;
+		}
+		.black {
+			color: #333333;
+		}
+		.white {
+			color: white;
+		}
+		.hidden {
+			display: none;
+		}
+		.logos {
+			height: 100px;
+			width: 100px;
+		}
+		.proj-container {
+			position: relative;
+			text-align: center;
+			color: white;
+			cursor: pointer;
+		}
+		.proj-img {
+			border-radius: 20px;
+			transition: all 0.5s;
+		}
+		.proj-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 22px;
+		}
+		.darken {
+			filter: brightness(40%);
+		}
+	</style>
+	<body
+		class="bg flex flex-col items-center"
+		style="min-height: 100vh; margin: 0px"
+	>
+		<div
+			id="nav"
+			class="flex w am transparent"
+			style="
+				justify-content: space-between;
+				padding: 15px 0px;
+				align-items: center;
+				position: fixed;
+				top: 0;
+				z-index: 10;
+			"
+		>
+			<div style="padding-left: 40px">
+				<a
+					id="main"
+					href="/"
+					class="am white"
+					style="font-weight: 900; font-size: 26px"
+					>BHAVINDU</a
+				>
+			</div>
+			<div style="padding-right: 40px">
+				<span
+					class="am white"
+					id="about"
+					style="
+						font-weight: 500;
+						font-size: 16px;
+						padding-right: 20px;
+						cursor: pointer;
+					"
+					>ABOUT</span
+				>
+				<span
+					class="am white"
+					id="proj"
+					style="font-weight: 500; font-size: 16px; cursor: pointer;"
+					>PROJECTS</span
+				>
+			</div>
+		</div>
+
+		<div class="flex w" style="height: 100vh; position: relative">
+			<video
+				style="
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					object-fit: cover;
+					z-index: 0;
+				"
+				autoplay
+				muted
+				loop
+			>
+				<source src="./img/vid.mp4" type="video/mp4" />
+			</video>
+			<div
+				class="flex items-center justify-center w flex-col"
+				style="z-index: 1; position: relative"
+			>
+				<span style="text-align: center">
+					<div
+						class="
+							animate__animated animate__fadeIn animate__delay-1s animate__slow
+						"
+						style="
+							font-weight: 900;
+							font-size: 60px;
+							padding-bottom: 10px;
+							color: #f7f7f7;
+							text-align: center;
+						"
+					>
+						BHAVINDU ADHIHETTY
+					</div>
+					<div
+						class="
+							animate__animated animate__fadeIn animate__delay-1s animate__slow
+						"
+						style="font-weight: 500; font-size: 24px; color: #f7f7f7"
+					>
+						ARCHITECTURE PORTFOLIO
+					</div>
+				</span>
+			</div>
+		</div>
+
+		<div
+			id="about-section"
+			class="flex justify-center items-center flex-col w"
+			style="padding: 3% 0px"
+		>
+			<img style="border: 2px solid white; border-radius: 50%;" src="./img/profile.png" width="400" height="400" alt="" />
+			<p
+				style="
+					max-width: 700px;
+					text-align: center;
+					margin: 0;
+					padding-top: 30px;
+					font-size: 20px;
+				"
+			>
+				<div style="font-size: 32px; font-weight: 700; padding-bottom: 20px; color: white">
+					Hello, my name is Bhavindu.
+				</div>
+				<div style="font-size: 17px; max-width: 900px; text-align: center;  color: white">
+					I’m a <strong style="color: white">3rd-year undergraduate student from OCAD University</strong> pursuing a
+					<strong style="color: white">BDES Environmental Design: Architecture Specialization.</strong> Before my
+					introduction to architecture, I was an avid practitioner of visual
+					arts and its various disciplines, namely, drawings and painting. Even
+					though I have now transitioned away from studying visual arts, I still
+					allow the artistic foundation I was brought up in to inspire and
+					permeate throughout my design exploration. Hence, my designs are
+					founded through a rigorous process of ideation which I value equal to
+					the final design output. For me, what’s most fulfilling through it all
+					is looking at an architectural design and being able to track back the
+					process of ideation, reliving all the small decisions made in a
+					design’s journey through to its eventual manifestation. That timelapse
+					of visual creativity is something I treasure deeply.
+					<br>
+					<br>
+					<strong style="color: white">Aside from architecture and design, I am proud to say that I have played professional cricket in Canada and Sri Lanka</strong></strong>, representing Canada both at the Senior Men’s and Under 19 teams
+					at the international stage in various competitions around the world and playing domestic cricket in Sri Lanka. At the age of 15, I was selected to represent Canada at the Under 19 Cricket
+					World Cup in Bangladesh. One year later, I was drafted into the Senior Men’s team where I consistently played at many world cricket events. At the age of 17, I took over the captaincy
+					of the Under 19 team, leading Canada through World Cup Qualifiers into 2018's Under 19 Cricket World Cup in New Zealand. Playing professional cricket has instilled me in many
+					qualities including discipline, work ethic, teamwork, and leadership, all of which I carry over to my work in architecture and design.
+				</div>
+			</p>
+		</div>
+
+		<div
+			class="flex justify-center items-center flex-col w"
+			style="padding: 3% 0px; background-color: #1a1a1d"
+		>
+			<div style="font-weight: 500; font-size: 32px; padding-bottom: 38px; color: white;">
+				Software Skills
+			</div>
+			<div class="flex flex-col">
+				<div
+					class="flex justify-center"
+					style="gap: 20px; flex-wrap: wrap; padding-bottom: 20px"
+				>
+					<img class="logos" src="./img/logos/1.png" alt="" />
+					<img class="logos" src="./img/logos/2.png" alt="" />
+					<img class="logos" src="./img/logos/3.png" alt="" />
+					<img class="logos" src="./img/logos/4.png" alt="" />
+					<img class="logos" src="./img/logos/5.png" alt="" />
+					<img class="logos" src="./img/logos/6.png" alt="" />
+					<img class="logos" src="./img/logos/7.png" alt="" />
+					<img class="logos" src="./img/logos/8.png" alt="" />
+				</div>
+				<div class="flex justify-center" style="gap: 20px; flex-wrap: wrap">
+					<img class="logos" src="./img/logos/9.png" alt="" />
+					<img class="logos" src="./img/logos/10.png" alt="" />
+					<img class="logos" src="./img/logos/11.png" alt="" />
+					<img class="logos" src="./img/logos/12.png" alt="" />
+					<img class="logos" src="./img/logos/13.png" alt="" />
+					<img class="logos" src="./img/logos/14.png" alt="" />
+					<img class="logos" src="./img/logos/15.png" alt="" />
+					<img class="logos" src="./img/logos/16.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div
+			id="proj-section"
+			class="flex justify-center items-center flex-col w"
+			style="padding: 3% 0px"
+		>
+			<div style="font-weight: 500; font-size: 32px; padding-bottom: 38px; color: white;">
+				Projects
+			</div>
+			<div class="flex" style="gap: 25px; flex-wrap: wrap">
+				<a href="./keller-house.html" class="proj-container">
+					<img class="proj-img" src="./img/Keller.jpg" width="400" alt="" />
+					<div class="proj-text hidden">The Keller House</div>
+				</a>
+				<a href="./tibetan-revival.html" class="proj-container">
+					<img class="proj-img" src="./img/Tibetan.jpg" width="400" alt="" />
+					<div class="proj-text hidden">The Tibetan Revival</div>
+				</a>
+				<a href="./pene-house.html" class="proj-container">
+					<img class="proj-img" src="./img/Pene.jpg" width="400" alt="" />
+					<div class="proj-text hidden">The Pené House</div>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script>
+		const navEl = document.querySelector("#nav");
+		document.addEventListener("scroll", function () {
+			scrollPosition = window.scrollY;
+			console.log(scrollPosition);
+			if (scrollPosition > 250) {
+				navEl.classList.remove("transparent");
+				navEl.classList.add("filled");
+				document.querySelector("#main").classList.remove("white");
+				document.querySelector("#about").classList.remove("white");
+				document.querySelector("#proj").classList.remove("white");
+				document.querySelector("#main").classList.add("black");
+				document.querySelector("#about").classList.add("black");
+				document.querySelector("#proj").classList.add("black");
+			} else {
+				navEl.classList.remove("filled");
+				navEl.classList.add("transparent");
+				document.querySelector("#main").classList.remove("black");
+				document.querySelector("#about").classList.remove("black");
+				document.querySelector("#proj").classList.remove("black");
+				document.querySelector("#main").classList.add("white");
+				document.querySelector("#about").classList.add("white");
+				document.querySelector("#proj").classList.add("white");
+			}
+		});
+
+		const elArr = document.querySelectorAll(".proj-container");
+
+		elArr.forEach(function (e) {
+			e.addEventListener("mouseover", function () {
+				e.querySelector(".proj-img").classList.add("darken");
+				e.querySelector(".proj-text").classList.remove("hidden");
+			});
+			e.addEventListener("mouseout", function () {
+				e.querySelector(".proj-img").classList.remove("darken");
+				e.querySelector(".proj-text").classList.add("hidden");
+			});
+		});
+		document.querySelector("#about").addEventListener("click", function () {
+			document
+				.querySelector("#about-section")
+				.scrollIntoView({ behavior: "smooth" });
+		});
+		document.querySelector("#proj").addEventListener("click", function () {
+			document
+				.querySelector("#proj-section")
+				.scrollIntoView({ behavior: "smooth" });
+		});
+	</script>
+</html>
