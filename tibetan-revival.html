@@ -59,6 +59,19 @@
 		.w {
 			width: 100%;
 		}
+		.galleryTrigger {
+			-webkit-transition: box-shadow 0.5s linear;
+			-moz-transition: box-shadow 0.5s linear;
+			-ms-transition: box-shadow 0.5s linear;
+			-o-transition: box-shadow 0.5s linear;
+			transition: box-shadow 0.5s linear;
+		}
+		.galleryTrigger:hover {
+			-webkit-box-shadow: 0px 10px 13px -7px #000000,
+				0px 0px 32px 8px rgba(0, 0, 0, 0.73);
+			box-shadow: 0px 10px 13px -7px #000000,
+				0px 0px 32px 8px rgba(0, 0, 0, 0.73);
+		}
 		.am {
 			-webkit-transition: background 0.5s linear;
 			-moz-transition: background 0.5s linear;
@@ -116,64 +129,23 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			cursor: pointer;
+			color: white;
+		}
+		img {
+			display: block;
 		}
 	</style>
 	<body
 		class="bg flex flex-col items-center"
 		style="min-height: 100vh; margin: 0px"
 	>
-		<div
-			id="nav"
-			class="flex w am transparent"
-			style="
-				justify-content: space-between;
-				padding: 15px 0px;
-				align-items: center;
-				position: fixed;
-				top: 0;
-				z-index: 10;
-			"
-		>
-			<div style="padding-left: 40px">
-				<a
-					id="main"
-					href="/"
-					class="am white"
-					style="font-weight: 900; font-size: 26px"
-					>BHAVINDU</a
-				>
-			</div>
-			<div style="padding-right: 40px">
-				<a
-					href="/#about-section"
-					class="am white"
-					id="about"
-					style="
-						font-weight: 500;
-						font-size: 16px;
-						padding-right: 20px;
-						cursor: pointer;
-					"
-					>ABOUT</a
-				>
-				<a
-					href="/#proj-section"
-					class="am white"
-					id="proj"
-					style="font-weight: 500; font-size: 16px; cursor: pointer"
-					>PROJECTS</a
-				>
-			</div>
-		</div>
 		<div id="keller-blur">
 			<div
 				id="keller-cover"
 				class="flex w flex-col justify-center items-center"
 			>
 				<div
-					class="
-						animate__animated animate__fadeIn animate__delay-5s animate__slower
-					"
+					class="animate__animated animate__fadeIn animate__delay-1s"
 					style="
 						font-weight: 900;
 						font-size: 75px;
@@ -186,7 +158,7 @@
 				>
 					THE TIBETAN REVIVAL
 				</div>
-				<div class="animate__animated animate__fadeIn animate__delay-5s">
+				<div class="animate__animated animate__fadeIn animate__delay-1s">
 					<div
 						class="
 							downArrow
@@ -198,14 +170,18 @@
 						"
 					>
 						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
+							style="width: 50px; height: 50px; color: white"
+							fill="none"
+							stroke="white"
 							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
 						>
 							<path
-								d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
-							/>
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 9l-7 7-7-7"
+							></path>
 						</svg>
 					</div>
 				</div>
@@ -217,40 +193,80 @@
 			style="padding: 3% 0; background-color: #1a1a1d"
 		>
 			<div
+				class="flex items-center"
 				style="
-					max-width: 950px;
+					max-width: 90%;
+					padding: 0 20px;
+					color: #fafafa;
+					text-align: center;
+					line-height: 20px;
+					margin-bottom: 20px;
+				"
+			>
+				<div style="color: white">LOCATION: PARKDALE, TORONTO, ON.</div>
+				<div
+					style="
+						color: white;
+						border-left: 1px solid white;
+						border-right: 1px solid white;
+						padding: 00px 30px;
+						margin: 0 30px;
+					"
+				>
+					PROJECT TYPE: INDIVIDUAL ACADEMIC WORK
+				</div>
+				<div style="color: white">
+					DURATION: 3 MONTHS (WINTER 2020 SEMESTER)
+				</div>
+			</div>
+			<div
+				style="
+					max-width: 90%;
 					padding: 0 20px;
 					color: #fafafa;
 					text-align: center;
 					line-height: 20px;
 				"
 			>
-				The essence of the Tibetan Revival project was to develop a design
-				solution for a community center at the prescribed location: Parkdale’s
-				King and Dufferin intersection. The challenge of this project was to
-				discover meaning in the design proposal, a reason for its manifestation.
-				Insofar as the location of this project was defined, I sought to figure
-				out the reason for its selection. Following extensive research on the
-				site’s history, the overwhelming Tibetan presence in that area became
-				abundantly clear. In spite of this presence, there lacked notable
-				remnants of Tibetan identity, history, and culture as they have fallen
-				victim to homogeneity. And so developed the reasons for my design
-				proposal’s manifestation: an architectural solution that employs the
-				theoretical framework of Critical Regionalism to revive the lost Tibetan
-				identity and to challenge the existing homogeneity.
+				The Tibetan Revival project aimed to develop a design solution for a
+				community center in Parkdale’s King and Dufferin intersection. The
+				challenge of this project was to discover meaning in the design
+				proposal. Insofar as the location of this project was defined, I had to
+				determine a suitable proposal given the nature of the location.
+				Extensive research on the site’s history revealed an overwhelming
+				Tibetan heritage. Unfortunately, the site concealed this heritage: it
+				lacked notable remnants of Tibetan identity, history, and culture. The
+				absence of Tibetan heritage inspired the reasoning for my proposal: an
+				architectural solution that employs the theoretical framework of
+				Critical Regionalism to revive the lost Tibetan identity and
+				subsequently challenge the site’s present homogeneity.
 			</div>
 		</div>
 
 		<div>
 			<div
-				class="flex justify-center bg"
-				style="position: sticky; top: 62px; background-color: #f7f7f7"
+				class="flex bg items-center"
+				style="
+					position: sticky;
+					top: 0px;
+					background-color: #628979;
+					justify-content: space-between;
+				"
 			>
+				<div style="padding-left: 40px">
+					<a
+						id="main"
+						href="/"
+						class="am white"
+						style="font-weight: 900; font-size: 26px"
+						>BHAVINDU</a
+					>
+				</div>
 				<div style="max-width: 700px; padding: 10px">
 					<span id="subMenu-1" class="subheading">Site</span>
 					<span
 						style="
-							color: #3333335e;
+							color: white;
 							font-size: 18px;
 							font-weight: 700;
 							text-transform: uppercase;
@@ -261,7 +277,7 @@
 					<span id="subMenu-2" class="subheading">Concept</span>
 					<span
 						style="
-							color: #3333335e;
+							color: white;
 							font-size: 18px;
 							font-weight: 700;
 							text-transform: uppercase;
@@ -271,34 +287,135 @@
 					>
 					<span id="subMenu-3" class="subheading">Floor Plans</span>
 				</div>
+
+				<div style="padding-right: 40px">
+					<a
+						href="/#about-section"
+						class="am white"
+						id="about"
+						style="
+							font-weight: 500;
+							font-size: 16px;
+							padding-right: 20px;
+							cursor: pointer;
+						"
+						>ABOUT</a
+					>
+					<a
+						href="/#proj-section"
+						class="am white"
+						id="proj"
+						style="font-weight: 500; font-size: 16px; cursor: pointer"
+						>PROJECTS</a
+					>
+				</div>
 			</div>
 			<div
 				class="flex justify-center items-center w flex-col"
-				style="flex-wrap: wrap; gap: 20px; padding: 50px 0px"
+				style="
+					flex-wrap: wrap;
+					gap: 60px;
+					padding: 50px 0px;
+					background-color: rgb(245, 245, 245);
+				"
 			>
 				<div
 					id="img-1"
 					data-imgID="1"
 					class="galleryTrigger"
-					style="width: 75%; cursor: pointer"
+					style="width: 75%; cursor: pointer; border-radius: 20px"
 				>
-					<img style="width: 100%" src="./img/9-min.png" alt="" />
+					<img
+						style="width: 100%; border-radius: 20px"
+						src="./img/9-min.png"
+						alt=""
+					/>
 				</div>
 				<div
 					id="img-2"
 					data-imgID="2"
 					class="galleryTrigger"
-					style="width: 75%; cursor: pointer"
+					style="width: 75%; cursor: pointer; border-radius: 20px"
 				>
-					<img style="width: 100%" src="./img/10-min.png" alt="" />
+					<img
+						style="width: 100%; border-radius: 20px"
+						src="./img/10-min.png"
+						alt=""
+					/>
 				</div>
 				<div
 					id="img-3"
 					data-imgID="3"
 					class="galleryTrigger"
-					style="width: 75%; cursor: pointer"
+					style="width: 75%; cursor: pointer; border-radius: 20px"
 				>
-					<img style="width: 100%" src="./img/11-min.png" alt="" />
+					<img
+						style="width: 100%; border-radius: 20px"
+						src="./img/11-min.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="flex justify-center items-center"
+			style="background-color: #628979; width: 100%"
+		>
+			<div class="flex items-center" style="padding: 10px; color: white">
+				<a href="/" style="color: white">BHAVINDU</a>
+				<div
+					class="flex"
+					style="
+						border-left: 1px solid white;
+						border-right: 1px solid white;
+						padding: 20px 30px;
+						margin: 0 30px;
+					"
+				>
+					<a
+						href="/#about-section"
+						id="about2"
+						style="
+							margin-right: 10px;
+							color: white;
+							font-weight: 300;
+							font-size: 14px;
+							cursor: pointer;
+						"
+						>ABOUT</a
+					>
+					<a
+						href="/#proj-section"
+						id="proj2"
+						style="
+							color: white;
+							font-weight: 300;
+							font-size: 14px;
+							cursor: pointer;
+						"
+						>PROJECTS</a
+					>
+				</div>
+				<div class="flex">
+					<a href="mailto:bhavinduad@gmail.com"
+						><img
+							style="width: 50px; height: 50px"
+							src="./img/logos/EMAIL.png"
+							alt=""
+					/></a>
+					<a href="https://www.instagram.com/badhihetty/?hl=en"
+						><img
+							style="width: 50px; height: 50px; margin: 0 10px"
+							src="./img/logos/IG.png"
+							alt=""
+					/></a>
+					<a href="http://www.linkedin.com/in/bhavinduad"
+						><img
+							style="width: 50px; height: 50px"
+							src="./img/logos/LINKEDIN.png"
+							alt=""
+					/></a>
 				</div>
 			</div>
 		</div>
@@ -389,20 +506,20 @@
 				navEl.classList.remove("transparent");
 				navEl.classList.add("filled");
 				document.querySelector("#main").classList.remove("white");
-				document.querySelector("#about").classList.remove("white");
-				document.querySelector("#proj").classList.remove("white");
+				document.querySelector("#about-section").classList.remove("white");
+				document.querySelector("#proj-section").classList.remove("white");
 				document.querySelector("#main").classList.add("black");
-				document.querySelector("#about").classList.add("black");
-				document.querySelector("#proj").classList.add("black");
+				document.querySelector("#about-section").classList.add("black");
+				document.querySelector("#proj-section").classList.add("black");
 			} else {
 				navEl.classList.remove("filled");
 				navEl.classList.add("transparent");
 				document.querySelector("#main").classList.remove("black");
-				document.querySelector("#about").classList.remove("black");
-				document.querySelector("#proj").classList.remove("black");
+				document.querySelector("#about-section").classList.remove("black");
+				document.querySelector("#proj-section").classList.remove("black");
 				document.querySelector("#main").classList.add("white");
-				document.querySelector("#about").classList.add("white");
-				document.querySelector("#proj").classList.add("white");
+				document.querySelector("#about-section").classList.add("white");
+				document.querySelector("#proj-section").classList.add("white");
 			}
 		});
 
@@ -462,7 +579,7 @@
 						top:
 							document.querySelector("#img-" + i).getBoundingClientRect().top +
 							window.pageYOffset +
-							-100,
+							-40,
 						behavior: "smooth",
 					});
 				});
